@@ -14,6 +14,8 @@ includes
 
 These should be placed at the top of your sketch:
 
-```#include <Spacebrew.h>
-#include <Ethernet.h>
-#include <WebSocketClient.h>```
+<pre>
+#include &lt;Spacebrew.h>
+#include &lt;Ethernet.h>
+#include &lt;WebSocketClient.h>
+</pre>
