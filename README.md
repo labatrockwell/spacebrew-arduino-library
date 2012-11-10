@@ -101,8 +101,10 @@ receving messages from subscribers
 
 connecting to a server
 =================
+<pre>
 uint8_t mac[] = {0xa4, 0xe7, 0xee, 0x03, 0xfd, 0x32};
 sb.connect(mac, "lab-server.rockwellgroup.com", "Rename_Me", "Inputs and Outputs?");
+</pre>
 Where:
 * mac: the mac address for the Ethernet library to get an IP, may need to be unique
 * "lab-server.rockwellgroup.com": the address for the computer where you are running the spacebrew server
@@ -113,10 +115,10 @@ Where:
 sending messages via publishers
 ================
 * range:
-    sb.send("myRangePub", 255);
+    ```sb.send("myRangePub", 255);```
 * string:
-    sb.send("someStringOutput", "bang!");
+    ```sb.send("someStringOutput", "bang!");```
 * boolean:
-    sb.send("myBoolPub", true);
+    ```sb.send("myBoolPub", true);```
 * other:
-    sb.send("customOutput", "img_url", "http://nyopoliticker.files.wordpress.com/2012/08/614px-hallandoatesalbumcover.jpeg");
+    ```sb.send("customOutput", "img_url", "http://nyopoliticker.files.wordpress.com/2012/08/614px-hallandoatesalbumcover.jpeg");```
