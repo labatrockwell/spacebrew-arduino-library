@@ -21,6 +21,15 @@ These should be placed at the top of your sketch:
 #include &lt;WebSocketClient.h>
 </pre>
 
+setup
+--------------
+* At the top of the file:
+    * ```Spacebrew sb;```
+* In setup:
+    * ```Ethernet.start(mac);//as per the Ethernet library example, where mac is a byte[6]```
+* In loop:
+    * ```sb.monitor();```
+
 usage
 --------------
 publishing
