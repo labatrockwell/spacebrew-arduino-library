@@ -112,7 +112,8 @@ connecting to a server
 =================
 <pre>
 uint8_t mac[] = {0xa4, 0xe7, 0xee, 0x03, 0xfd, 0x32};
-sb.connect(mac, "lab-server.rockwellgroup.com", "Rename_Me", "Inputs and Outputs?");
+Ethernet.begin(mac);
+sb.connect("lab-server.rockwellgroup.com", "Rename_Me", "Inputs and Outputs?");
 </pre>
 Where:
 * mac: the mac address for the Ethernet library to get an IP, may need to be unique
