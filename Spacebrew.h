@@ -3,6 +3,7 @@
 #define SPACEBREW_H
 
 #include <WebSocketClient.h>
+#include "Arduino.h"
 
 enum SBType { BOOLEAN, STRING, RANGE };
 struct PublisherNode {
@@ -110,6 +111,9 @@ class Spacebrew{
       send(name, "string", value);
     }
     bool send(char* name, bool value){
+      send(name, (char*)"boolean", (char*)(value ? "true" : "false"));
+    }
+    bool send(char* name, boolean value){
       send(name, (char*)"boolean", (char*)(value ? "true" : "false"));
     }
     bool send(char* name, int value);
