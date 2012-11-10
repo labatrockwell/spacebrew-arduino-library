@@ -2,7 +2,6 @@
 #ifndef SPACEBREW_H
 #define SPACEBREW_H
 
-#include <Ethernet.h>
 #include <WebSocketClient.h>
 
 enum SBType { BOOLEAN, STRING, RANGE };
@@ -91,7 +90,7 @@ class Spacebrew{
     //void addSubscribe(char* name, SBType type, OnBooleanMessage function);
     //void addSubscribe(char* name, SBType type, OnRangeMessage function);
     //void addSubscribe(char* name, SBType type, OnStringMessage function);
-    void connect(uint8_t *mac, char hostname[], char* clientName, char* description, int port = 9000);
+    void connect(char hostname[], char* clientName, char* description, int port = 9000);
     void disconnect();
     bool send(char* name, char* type, char* value);
     bool send(char* name, SBType type, char* value){

@@ -105,11 +105,7 @@ void Spacebrew::sendConfig(){
   client.send(b);
 }
 
-void Spacebrew::connect(uint8_t *mac, char hostname[], char* clientName, char* description, int port){
-  for(char i = 0; i < 6; i++){
-    this->mac[i] = *(mac++);
-  }
-  Ethernet.begin(mac);
+void Spacebrew::connect(char hostname[], char* clientName, char* description, int port){
   client.connect(hostname, port);
   m_sClientName = clientName;
   m_sDescription = description;
