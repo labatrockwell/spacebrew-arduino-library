@@ -36,30 +36,30 @@ publishing
 ==============
 
 * range:
-    * sb.addPublish("PubName", RANGE);
-    * sb.addPublish("OtherPubName", 255);
+    * `sb.addPublish("PubName", RANGE);`
+    * `sb.addPublish("OtherPubName", 255);`
 * string:
-    * sb.addPublish("PubStringName", STRING);
-    * sb.addPublish("AnotherStringOutput", "default string");
+    * `sb.addPublish("PubStringName", STRING);`
+    * `sb.addPublish("AnotherStringOutput", "default string");`
 * boolean:
-    * sb.addPublish("BoolPub", BOOLEAN);
-    * sb.addPublish("Different_Bool", true);
+    * `sb.addPublish("BoolPub", BOOLEAN);`
+    * `sb.addPublish("Different_Bool", true);`
 * other:
-    * sb.addPublish("Custom Publisher", "img_url");
+    * `sb.addPublish("Custom Publisher", "img_url");`
 
 subscribing
 =============
 * range:
-    * sb.addSubscribe("SubName", RANGE);
-    * sb.addSubscribe("OtherSubName", "range");
+    * `sb.addSubscribe("SubName", RANGE);`
+    * `sb.addSubscribe("OtherSubName", "range");`
 * string:
-    * sb.addSubscribe("SubStringName", STRING);
-    * sb.addSubscribe("AnotherStringInput", "string");
+    * `sb.addSubscribe("SubStringName", STRING);`
+    * `sb.addSubscribe("AnotherStringInput", "string");`
 * boolean:
-    * sb.addSubscribe("BoolSub", BOOLEAN);
-    * sb.addSubscribe("Different_Bool", "boolean");
+    * `sb.addSubscribe("BoolSub", BOOLEAN);`
+    * `sb.addSubscribe("Different_Bool", "boolean");`
 * other:
-    * sb.addSubscribe("Custom Subscriber", "crazy_type");
+    * `sb.addSubscribe("Custom Subscriber", "crazy_type");`
 
 receving messages from subscribers
 =========================
@@ -110,16 +110,17 @@ receving messages from subscribers
 
 connecting to a server
 =================
-<pre>
+```
 uint8_t mac[] = {0xa4, 0xe7, 0xee, 0x03, 0xfd, 0x32};
 Ethernet.begin(mac);
-sb.connect("lab-server.rockwellgroup.com", "Rename_Me", "Inputs and Outputs?");
-</pre>
+sb.connect("sandbox.spacebrew.cc", "Rename_Me", "Inputs and Outputs?");
+```
+
 Where:
-* mac: the mac address for the Ethernet library to get an IP, may need to be unique
-* "lab-server.rockwellgroup.com": the address for the computer where you are running the spacebrew server
-* "Rename_Me": the name for this client
-* "Inputs and Outputs?": a description for this client which will be exposed via the admin
+* `mac`: the mac address for the Ethernet library to get an IP, may need to be unique
+* `"sandbox.spacebrew.cc"`: the address for the computer where you are running the spacebrew server
+* `"Rename_Me"`: the name for this client
+* `"Inputs and Outputs?"`: a description for this client which will be exposed via the admin
 
 
 sending messages via publishers
